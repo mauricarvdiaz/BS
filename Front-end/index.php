@@ -1,0 +1,1 @@
+<?php include_once("bsale-index.html"); ?>
