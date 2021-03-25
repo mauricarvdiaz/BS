@@ -1,11 +1,7 @@
 const app = require('./app');
-const port = 3900
+const port = 3900 || process.env.PORT
 
-app.get('/', (req, res) => {
-    res.send('hola');
-})
-
-app.listen(process.env.PORT, () => {
+app.listen(port, () => {
     console.log('server running!');
 });
 

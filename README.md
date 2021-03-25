@@ -42,5 +42,4 @@ _El despliegue de la aplicación se realizó en Heroku_ [Link](https://bsalechal
 
 ## Autor ✒️
 
-* **Mauricio Carvajal Díaz**# BS
-# BS
+* **Mauricio Carvajal Díaz**

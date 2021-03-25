@@ -24,7 +24,7 @@ if ('loading' in HTMLImageElement.prototype) {
 }
 
 /**  Funcion que controla el boton activo de las categorias
- * @param {*} category : tipo String. Corresponde a la categoria seleccionada en la vista (cerveza, vodka, snack, bebidas, ron, etc).
+ * @param {String} category : Corresponde a la categoria seleccionada en la vista (cerveza, vodka, snack, bebidas, ron, etc).
  * 
  * @Descripcion Funcion que desactiva el boton seleccionado quitando la clase .active y agrega la clase .active al boton de la categoria seleccionada.
  */
@@ -175,7 +175,7 @@ function paginate(array, page_size, page_number){
 /**
  * @param {Number} page : numero de la pagina seleccionada
  * 
- * @Descripcion Funcion que cambia la pagina en la paginación, provoca que se cambien los productos de la vista.
+ * @Descripcion Funcion que cambia la pagina en la paginación, se llama a showProducts() para cambiar los productos de la vista.
  */
 function numberPage(page) {
     pageNumber = page;
@@ -183,7 +183,7 @@ function numberPage(page) {
 }
 
 /**
- * @Descripcion Funcion que avanza una pagina en la paginación, provoca que se cambien los productos de la vista.
+ * @Descripcion Funcion que avanza una pagina en la paginación, se llama a showProducts() para cambiar los productos de la vista.
  */
 function nextPage() {
     pageNumber++;
@@ -191,7 +191,7 @@ function nextPage() {
 }
 
 /**
- * @Descripcion Funcion que retrocede una pagina en la paginación, provoca que se cambien los productos de la vista.
+ * @Descripcion Funcion que retrocede una pagina en la paginación, se llama a showProducts() para cambiar los productos de la vista.
  */
 function previusPage() {
     pageNumber--;
@@ -202,7 +202,7 @@ function previusPage() {
  * 
  * @param {Number} pageCont : cantidad de paginas de la paginacion.
  * 
- * @Descripcion Función que agrega los botones Siguiente, Anterior y Numericos de la paginación. 
+ * @Descripcion Función que agrega los botones Siguiente, Anterior y Numericos de la paginación. Se agregan al div que tiene por clase .pagination
 */
 function createPagination(pageCont) {
     let paginationButtons = '';
@@ -225,7 +225,7 @@ function createPagination(pageCont) {
 
 /**
  * @Descripcion 
- *              - Funcion que mustra los productos en la vista. 
+ *              - Funcion que crea los div .card para cada producto en la variable global 'products', agregandolos al div .product-container
  *              - Por cada producto obtenido en las consultas a la Api.
  *                  - Se crean los elementos para crear un Card.
  *                  - Los Card se componen de Nombre del producto, Imagen, Precio, Descuento, Input de cantidad y Boton de agregar al carro.
@@ -322,7 +322,7 @@ function showProducts() {
 }
 
 /**
- * @Descripcion Funcion que ordena los productos de acuerdo a la opción seleccionada en el select
+ * @Descripcion Funcion que ordena los productos de acuerdo a la opción seleccionada en el select con id orden.
  */
 function ordenProducts() {
     const optionSelect = document.querySelector('#orden');
@@ -394,7 +394,7 @@ function showAlert(val, status) {
  * @param {Object} product 
  * 
  * @Descripcion Funcion que agrega un producto al carrito de compras
- *                  - Se obtiene la cantidad seleccionada por el cliente.
+ *                  - Se obtiene la cantidad seleccionada por el cliente. (por la id del input cantidad)
  *                  - Si el producto existe en el carrito se aumenta la cantidad.
  *                  - Si no esta en el carrito, se agrega con la cantidad seleccionada. 
  *                  - Luego se calcula el total de productos que tiene el carriro.'
