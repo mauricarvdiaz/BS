@@ -21,12 +21,12 @@ _Para poder usar la aplicación necesitar tener instalado_
 
 _Para poder usar la ApiRest_
 
-1. Ubicarse por consola en la carpeta ApiRest
-2. Para instalar las dependencias, ejecutar el comando.
+1. Ubicarse por consola en la carpeta Back-end
+2. Instalar las dependencias con el comando.
 ```
 npm install
 ```
-3. Para arrancar la Api, ejecutar el comando.
+3. Finalmente, para arrancar la Api ejecutar el comando.
 ```
 npm start
 ```
